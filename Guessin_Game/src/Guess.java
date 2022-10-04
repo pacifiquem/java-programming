@@ -1,7 +1,7 @@
 //guessing game without swing
 import java.lang.*;
 import java.util.*;
-public class Main {
+public class Guess {
     public static void Checksolution(int user_input, int guessCount) {
 
         //initializing computer's number
