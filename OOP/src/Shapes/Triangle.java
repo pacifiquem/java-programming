@@ -29,6 +29,10 @@ public class Triangle extends Shapes {
         this.hypotenuse = hypotenuse;
     }
 
+    public void mySpecificName() {
+        System.out.println(" Specifically I'm a Triangle");
+    }
+
     public void syName() {
         System.out.println("I'm child class Triangle");
     }

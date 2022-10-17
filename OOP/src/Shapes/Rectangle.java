@@ -20,7 +20,10 @@ public class Rectangle extends Shapes {
         this.width = width;
     }
 
-    public void syName() {
-        System.out.println("I'm child class Rectangle");
+    public void sayName(Shapes shapes) {
+        shapes.syName();
+    }
+    public void mySpecificName() {
+        System.out.println(" Specifically I'm a Rectangle");
     }
 }

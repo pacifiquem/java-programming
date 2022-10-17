@@ -14,4 +14,9 @@ public class Circle extends Shapes {
     public void syName() {
         System.out.println("I'm child class Circle");
     }
+
+    public void mySpecificName() {
+        System.out.println(" Specifically I'm a Circle");
+    }
+
 }
