@@ -1,20 +1,29 @@
-package Shapes;
+/**
+ * 
+ */
+package rw.ac.rca.shape;
 
-public class Square extends Shapes {
-    private float side;
+/**
+ * @author Aphrodice Rwagaju
+ *
+ */
+public class Square extends Shape {
+	
+	private float side;
 
-    public float getSide() {
-        return side;
-    }
+	public float getSide() {
+		return side;
+	}
 
-    public void setSide(float side) {
-        this.side = side;
-    }
-
-    public void syName() {
-        System.out.println("I'm child class Square");
-    }
-    public void mySpecificName() {
-        System.out.println(" Specifically I'm a Square");
-    }
+	public void setSide(float side) {
+		this.side = side;
+	}
+	
+	public void sayYourType() {
+		System.out.println("I am sub class Square");
+	}
+	
+	public void squareType() {
+		System.out.println("I am only sub class Square");
+	}
 }

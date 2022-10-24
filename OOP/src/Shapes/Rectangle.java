@@ -1,29 +1,31 @@
-package Shapes;
+/**
+ * 
+ */
+package rw.ac.rca.shape;
 
-public class Rectangle extends Shapes {
-    public float width;
-    public float length;
-
-    public float getLength() {
-        return length;
-    }
-
-    public void setLength(float length) {
-        this.length = length;
-    }
-
-    public float getWidth() {
-        return width;
-    }
-
-    public void setWidth(float width) {
-        this.width = width;
-    }
-
-    public void sayName(Shapes shapes) {
-        shapes.syName();
-    }
-    public void mySpecificName() {
-        System.out.println(" Specifically I'm a Rectangle");
-    }
+/**
+ * @author Aphrodice Rwagaju
+ *
+ */
+public class Rectangle extends Shape {
+	
+	private float height;
+	private float width;
+	
+	public float getHeight() {
+		return height;
+	}
+	public void setHeight(float height) {
+		this.height = height;
+	}
+	public float getWidth() {
+		return width;
+	}
+	public void setWidth(float width) {
+		this.width = width;
+	}
+	
+	public void sayYourType() {
+		System.out.println("I am sub class Rectangle");
+	}
 }

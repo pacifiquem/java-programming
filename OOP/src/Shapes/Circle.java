@@ -1,22 +1,25 @@
-package Shapes;
+/**
+ * 
+ */
+package rw.ac.rca.shape;
 
-public class Circle extends Shapes {
-    private int radius;
+/**
+ * @author Aphrodice Rwagaju
+ *
+ */
+public class Circle extends Shape {
+	
+	private float radius;
 
-    public int getRadius() {
-        return radius;
-    }
+	public float getRadius() {
+		return radius;
+	}
 
-    public void setRadius(int radius) {
-        this.radius = radius;
-    }
-
-    public void syName() {
-        System.out.println("I'm child class Circle");
-    }
-
-    public void mySpecificName() {
-        System.out.println(" Specifically I'm a Circle");
-    }
-
+	public void setRadius(float radius) {
+		this.radius = radius;
+	}
+	
+	public void sayYourType() {
+		System.out.println("I am sub class Circle");
+	}
 }
