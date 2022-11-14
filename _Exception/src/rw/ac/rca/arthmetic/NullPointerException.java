@@ -2,9 +2,8 @@ package rw.ac.rca.arthmetic;
 
 public class NullPointerException {
     public static void main(String args[]) {
-        String s = null;
         NullPointerException("another-banga");
-        NullPointerException(s);
+        NullPointerException(null);
     }
 
     public static void NullPointerException(String s) {
