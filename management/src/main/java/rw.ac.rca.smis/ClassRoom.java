@@ -1,4 +1,6 @@
-package management.Entities;
+package rw.ac.rca.smis;
+
+import java.util.*;
 
 public class ClassRoom {
     private int id;

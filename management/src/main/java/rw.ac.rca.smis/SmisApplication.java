@@ -1,6 +1,6 @@
-package management.rw.ac.rca.smis;
+package rw.ac.rca.smis;
 
-public class Main {
+public class SmisApplication {
     public static void main(String[] args) {
         System.out.println("Hello world!");
     }

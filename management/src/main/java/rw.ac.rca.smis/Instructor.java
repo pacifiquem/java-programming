@@ -1,7 +1,5 @@
-package management.Entities;
-
-import java.util.Date;
-import java.util.List;
+package rw.ac.rca.smis;
+import java.util.*;
 
 public class Instructor {
 

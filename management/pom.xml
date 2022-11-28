@@ -47,13 +47,13 @@
             </testResource>
         </testResources>
         <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.tomcat.maven</groupId>
-                    <artifactId>tomcat-maven-plugin</artifactId>
-                    <version>2.2</version>
-                </plugin>
-            </plugins>
+<!--            <plugins>-->
+<!--                <plugin>-->
+<!--                    <groupId>org.apache.tomcat.maven</groupId>-->
+<!--                    <artifactId>tomcat-maven-plugin</artifactId>-->
+<!--                    <version>2.2</version>-->
+<!--                </plugin>-->
+<!--            </plugins>-->
         </pluginManagement>
         <plugins>
             <plugin>
@@ -243,8 +243,8 @@
     </dependencies>
     <developers>
         <developer>
-            <name>valens200</name>
-            <email>valensniyonsenga2003@gmail.com</email>
+            <name>pacifiquemurangwa001@gmail.com</name>
+            <email>pacifiquemurangwa001@gmail.com</email>
             <roles>
                 <role>Student at Rwanda coding academy</role>
             </roles>

@@ -1,4 +1,4 @@
-package management.Entities;
+package rw.ac.rca.smis;
 
 public class Enrollment {
 }

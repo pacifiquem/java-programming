@@ -1,6 +1,6 @@
-package management.Entities;
+package rw.ac.rca.smis;
 
-import java.util.List;
+import java.util.*;
 
 public class Student {
     private int id;
