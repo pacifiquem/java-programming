@@ -7,6 +7,15 @@ import java.util.Date;
 @Table (name = "student_table")
 public class Student
 {
+    public Student() {
+    }
+
+    public Student(String name, String gender, Date date) {
+        this.name = name;
+        this.gender = gender;
+        this.date = date;
+    }
+
     public Long getId() {
         return id;
     }
@@ -25,6 +34,10 @@ public class Student
     @ManyToOne
     @JoinColumn(name = "address_id")
     private Address address;
+
+    @ManyToOne
+    @JoinColumn(name= "course_id")
+    private Course course;
 
     public int getRegId() {
         return regId;
@@ -64,6 +77,14 @@ public class Student
 
     public void setAddress(Address address) {
         this.address = address;
+    }
+
+    public Course getCourse() {
+        return course;
+    }
+
+    public void setCourse(Course course) {
+        this.course = course;
     }
 
     private int regId;

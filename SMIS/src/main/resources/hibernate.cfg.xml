@@ -7,7 +7,7 @@
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/smis</property>
         <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.connection.password">P@12p98p</property>
 
         <property name="hibernate.session_factory_name">SmisSessionFactory</property>
         <property name="hibernate.connection.pool_size">1</property>
@@ -31,7 +31,6 @@
 
         <!-- Models -->
         <mapping class="rw.ac.rca.smis.orm.Address" />
-        <mapping class="rw.ac.rca.smis.orm.ClassRoom" />
         <mapping class="rw.ac.rca.smis.orm.Course" />
         <mapping class="rw.ac.rca.smis.orm.Instructor" />
         <mapping class="rw.ac.rca.smis.orm.Student" />

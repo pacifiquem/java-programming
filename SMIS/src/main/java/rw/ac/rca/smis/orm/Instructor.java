@@ -10,12 +10,20 @@ public class Instructor
 {
     @Id()
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id",nullable = false)
+    @Column(name = "instructor_id",nullable = false)
     private int id;
 
     @ManyToOne
     @JoinColumn(name = "address_id")
     private Address address;
+
+    public Instructor() {
+    }
+
+    public Instructor(String name, Date date) {
+        this.name = name;
+        this.date = date;
+    }
 
     public int getId() {
         return id;
@@ -49,18 +57,20 @@ public class Instructor
         this.date = date;
     }
 
-    public List<Course> getCourses() {
+    public Course getCourses() {
         return courses;
     }
 
-    public void setCourses(List<Course> courses) {
+    public void setCourses(Course courses) {
         this.courses = courses;
     }
 
     private int regId;
     private String name;
     private Date date;
-    private List<Course> courses;
+    @ManyToOne
+    @JoinColumn(name = "courses_course_id")
+    private Course courses;
 
     public Address getAddress() {
         return address;

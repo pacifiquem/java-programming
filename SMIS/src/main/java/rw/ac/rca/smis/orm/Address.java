@@ -8,13 +8,22 @@ import java.util.Set;
 @Entity
 @Table (name = "address")
 public class Address {
+
         @Id()
         @GeneratedValue(strategy = GenerationType.AUTO)
-        @Column(name = "id",nullable = false)
+        @Column(name = "address_id",nullable = false)
         private int id;
 
         private String placeName;
         private String coordinates;
+
+    public Address() {
+    }
+
+    public Address(String placeName, String coordinates) {
+        this.placeName = placeName;
+        this.coordinates = coordinates;
+    }
 
     public int getId() {
         return id;
@@ -40,16 +49,16 @@ public class Address {
         this.coordinates = coordinates;
     }
 
-    public Set<Student> getStudents() {
+    public Student getStudents() {
         return students;
     }
 
-    public void setStudents(Set<Student> students) {
+    public void setStudents(Student students) {
         this.students = students;
     }
 
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "address")
-        private Set<Student> students;
+        private Student students;
 
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "address")
     private Set<Instructor> instructors;
