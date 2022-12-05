@@ -10,7 +10,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
-    <description>School Management Information System is a Software Developed by Aphrodice Rwagaju for the Purpose of Teaching Software Development and Design in RCA</description>
+    <description>School Management Information System is a Software Developed by Murangwa Pacifique for the Purpose of Learning Software Development and Design in RCA</description>
     <build>
         <finalName>smis##0.1</finalName>
         <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
@@ -240,8 +240,8 @@
     </dependencies>
     <developers>
         <developer>
-            <name>Aphrodice Rwagaju</name>
-            <email>aphrorwa@gmail.com</email>
+            <name>Pacifique Murangwa</name>
+            <email>pacifiquemurangwa001@gmail.com</email>
             <roles>
                 <role>Software Programming Instructor</role>
             </roles>
