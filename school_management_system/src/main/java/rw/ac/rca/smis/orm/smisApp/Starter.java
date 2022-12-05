@@ -16,19 +16,19 @@ import rw.ac.rca.smis.orm.Student;
 public class Starter {
 
     public static void main(String[] args) {
-        Address add= new Address("Kigali","KN59 ST 13");
-
         Date date = new Date();
-        Instructor valens = new Instructor("Rwagaju Aphrodice",date,'M');
-        valens.setAddress(add);
-        Course course1 = new Course(valens, 5, "python", 12);
-        Student student1 = new Student(course1,"valens",date,'f',add);
+
+        Address add = new Address("Kigali","KN59 ST 13");
+        Instructor pacifique = new Instructor("Rwagaju Aphrodice",date,'M');
+        pacifique.setAddress(add);
+        Course course1 = new Course(pacifique, 5, "python", 12);
+        Student student1 = new Student(course1,"pacifiquem",date,'f',add);
         Mark mark = new Mark(course1,student1,100);
 
 
         Configuration config = new Configuration();
         config.configure("hibernate.cfg.xml");
-        System.out.println("Openning session");
+        System.out.println("Opening session");
 
         @SuppressWarnings("deprecation")
         SessionFactory factory = config.buildSessionFactory();
@@ -38,9 +38,9 @@ public class Starter {
         Transaction transaction = session.beginTransaction();
 
         //saving objects
-        session.save(add);
+        session.saveOrUpdate(add);
         session.saveOrUpdate(course1);
-        session.saveOrUpdate(valens);
+        session.saveOrUpdate(pacifique);
         session.saveOrUpdate(student1);
         session.saveOrUpdate(mark);
 

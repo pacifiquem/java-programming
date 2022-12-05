@@ -14,7 +14,7 @@
         <property name="hibernate.connection.pool_size">1</property>
         <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-        <property name="hibernate.default_schema">sms</property>
+        <property name="hibernate.default_schema">smis</property>
         <property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
 
         <property name="current_session_context_class">thread</property>
