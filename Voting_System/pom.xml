@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>rw.rca</groupId>
-    <artifactId>smis</artifactId>
+    <groupId>mpac.learning.java</groupId>
+    <artifactId>Hibernate_Voting_System_by_mpac</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>smis</name>
+    <name>Voting-System</name>
     <properties>
         <project.java.version>11.0.17.</project.java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -12,7 +12,7 @@
     </properties>
     <description>Voting System is a Software Developed by Murangwa Pacifique for the Purpose of Learning Software Development and Design in RCA</description>
     <build>
-        <finalName>smis##0.1</finalName>
+        <finalName>votingSystem##0.1</finalName>
         <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
         <testSourceDirectory>${basedir}/src/test/java</testSourceDirectory>
         <resources>
