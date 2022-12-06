@@ -7,21 +7,25 @@ import javax.persistence.*;
 @Table(name = "voter")
 public class Voter {
 
+    public int getVoter_id() {
+        return voter_id;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE )
     private int voter_id;
 
-    public Voter getCandidate_id() {
+    public Candidate getCandidate_id() {
         return candidate_id;
     }
 
-    public void setCandidate_id(Voter candidate_id) {
+    public void setCandidate_id(Candidate candidate_id) {
         this.candidate_id = candidate_id;
     }
 
     @OneToOne
     @JoinColumn(name = "candidate_id")
-    private Voter candidate_id;
+    private Candidate candidate_id;
 
     public Voter() {
     }
