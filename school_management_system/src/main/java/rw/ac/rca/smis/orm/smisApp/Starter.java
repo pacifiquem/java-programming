@@ -13,18 +13,14 @@ import rw.ac.rca.smis.orm.Instructor;
 import rw.ac.rca.smis.orm.Mark;
 import rw.ac.rca.smis.orm.Student;
 
+import java.util.*;
+
 public class Starter {
 
     public static void main(String[] args) {
         Date date = new Date();
 
-        Address add = new Address("Kigali","KN59 ST 13");
-        Instructor pacifique = new Instructor("Rwagaju Aphrodice",date,'M');
-        pacifique.setAddress(add);
-        Course course1 = new Course(pacifique, 5, "python", 12);
-        Student student1 = new Student(course1,"pacifiquem",date,'f',add);
-        Mark mark = new Mark(course1,student1,100);
-
+//add your codes here
 
         Configuration config = new Configuration();
         config.configure("hibernate.cfg.xml");
@@ -38,11 +34,7 @@ public class Starter {
         Transaction transaction = session.beginTransaction();
 
         //saving objects
-        session.saveOrUpdate(add);
-        session.saveOrUpdate(course1);
-        session.saveOrUpdate(pacifique);
-        session.saveOrUpdate(student1);
-        session.saveOrUpdate(mark);
+//        session.saveOrUpdate();
 
 
         transaction.commit();

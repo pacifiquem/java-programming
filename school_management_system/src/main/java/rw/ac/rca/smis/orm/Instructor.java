@@ -14,69 +14,48 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-//import java.utils*;
 @Entity
 @Table(name="instructor")
-public class Instructor {
+public class Instructor extends Person{
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.TABLE )
+	private int id;
+	private  String name;
+
+	private Date dateOfBirth;
+	private char gender;
+
+	public Instructor() {}
+
 	public Instructor(String name, Date dateOfBirth, char gender) {
 		super();
 		this.name = name;
 		this.dateOfBirth = dateOfBirth;
 		this.gender = gender;
 	}
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO )
-	 private int id;
-	  private  String name;
-	  private Date dateOfBirth;
-	  private char gender;
-	  
-	  @ManyToOne
-	  @JoinColumn(name = "address_id")
-	  private  Address address;
-	  
-	  @ManyToMany
-	  @JoinTable(name = "instructor_course", joinColumns = { @JoinColumn(name = "instructor_id") }, inverseJoinColumns = { @JoinColumn(name = "course_id") })
-	  private  List <Course> courses;
-	  
-  public int getId() {
-		return id;
+
+	public Date getDateOfBirth() {
+		return dateOfBirth;
 	}
-	public void setId(int id) {
-		this.id = id;
-	}
+	@Override
 	public String getName() {
 		return name;
 	}
+	@Override
 	public void setName(String name) {
 		this.name = name;
-	}
-	public Date getDateOfBirth() {
-		return dateOfBirth;
 	}
 	public void setDateOfBirth(Date dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
+	@Override
 	public char getGender() {
 		return gender;
 	}
+	@Override
 	public void setGender(char gender) {
 		this.gender = gender;
 	}
-	
-	public Address getAddress() {
-		return address;
-	}
-	public void setAddress(Address address) {
-		this.address = address;
-	}
-	public List<Course> getCourses() {
-		return courses;
-	}
-	public void setCourses(List<Course> courses) {
-		this.courses = courses;
-	}
- 
-   
 
 }
