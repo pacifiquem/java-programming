@@ -22,10 +22,10 @@ public class Instructor extends Person{
 	@GeneratedValue(strategy = GenerationType.TABLE )
 	private int id;
 	private  String name;
-
 	private Date dateOfBirth;
 	private char gender;
-
+	@ManyToOne
+	private Address address;
 	public Instructor() {}
 
 	public Instructor(String name, Date dateOfBirth, char gender) {

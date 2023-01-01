@@ -28,6 +28,8 @@ public class Student extends  Person{
 	private Date dateOfBirth;
 	private char gender;
 	private String name;
+	@ManyToOne
+	private Address address;
 	public Student() {}
 
 	public Student( String name, Date dateOfBirth, char gender) {
@@ -58,5 +60,10 @@ public class Student extends  Person{
 	public void setDateOfBirth(Date dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
-	
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 }
