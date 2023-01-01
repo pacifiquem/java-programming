@@ -16,6 +16,8 @@ public class Mark {
 	@GeneratedValue(strategy = GenerationType.TABLE)
 	private int id;
 	private int scoredMark;
+	@ManyToOne
+	private Student student;
 
 	public Mark() {}
 	public Mark( int scoredMark) {
@@ -28,6 +30,14 @@ public class Mark {
 
 	public void setScoredMark(int scoredMark) {
 		this.scoredMark = scoredMark;
+	}
+
+	public Student getStudent() {
+		return student;
+	}
+
+	public void setStudent(Student student) {
+		this.student = student;
 	}
 
 }

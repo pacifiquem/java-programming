@@ -30,6 +30,8 @@ public class Student extends  Person{
 	private String name;
 	@ManyToOne
 	private Address address;
+	@OneToMany(mappedBy = "student")
+	private ArrayList<Mark> mark;
 	public Student() {}
 
 	public Student( String name, Date dateOfBirth, char gender) {
@@ -65,5 +67,11 @@ public class Student extends  Person{
 	}
 	public void setAddress(Address address) {
 		this.address = address;
+	}
+	public ArrayList<Mark> getMark() {
+		return mark;
+	}
+	public void setMark(ArrayList<Mark> mark) {
+		this.mark = mark;
 	}
 }
