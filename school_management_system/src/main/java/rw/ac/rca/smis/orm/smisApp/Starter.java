@@ -70,6 +70,21 @@ public class Starter {
         course1.setInstructor(instructor1);
         course2.setInstructor(instructor1);
 
+        //assigning mark to course
+        course1.setMark(marks);
+
+        //assigning course to mark
+        mark1.setCourse(course1);
+        mark1.setCourse(course1);
+
+        //assign mark to student
+        student1.setMark(marks);
+        student2.setMark(marks);
+
+        //assign student to mark
+        mark1.setStudent(student1);
+        mark2.setStudent(student1);
+
         Configuration config = new Configuration();
         config.configure("hibernate.cfg.xml");
         System.out.println("Opening session");
