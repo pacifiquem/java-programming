@@ -51,6 +51,17 @@ public class Starter {
         students.add(student1);
         students.add(student2);
 
+        //assigning instuctors and students to address
+        address1.setInstructors(instructors);
+        address1.setStudents(students);
+
+        //assigning address to student
+        student1.setAddress(address1);
+        student2.setAddress(address1);
+
+        //assigning address to instructor
+        instructor1.setAddress(address1);
+        instructor2.setAddress(address1);
 
         Configuration config = new Configuration();
         config.configure("hibernate.cfg.xml");
