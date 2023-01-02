@@ -20,6 +20,8 @@ public class Course extends Person {
 	@ManyToOne
 	private Instructor instructor;
 
+	@ManyToMany
+	private ArrayList<Student> students;
 
 	public Course() {}
 
@@ -73,4 +75,11 @@ public class Course extends Person {
 		this.instructor = instructor;
 	}
 
+	public ArrayList<Student> getStudents() {
+		return students;
+	}
+
+	public void setStudents(ArrayList<Student> students) {
+		this.students = students;
+	}
 }
