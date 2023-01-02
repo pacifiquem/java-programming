@@ -14,6 +14,7 @@ public class Address {
 	private  int id;
 	private String name;
 	private String streetAddress;
+
 	public Address(String name, String streetAddress) {
 		this.name = name;
 		this.streetAddress = streetAddress;

@@ -62,6 +62,7 @@ public class Instructor extends Person{
 		this.gender = gender;
 	}
 
+
 	public Address getAddress() {
 		return address;
 	}

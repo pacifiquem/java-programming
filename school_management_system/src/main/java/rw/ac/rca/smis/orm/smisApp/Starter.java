@@ -104,6 +104,7 @@ public class Starter {
         config.configure("hibernate.cfg.xml");
         System.out.println("Opening session");
 
+
         @SuppressWarnings("deprecation")
         SessionFactory factory = config.buildSessionFactory();
         Session session = factory.openSession();

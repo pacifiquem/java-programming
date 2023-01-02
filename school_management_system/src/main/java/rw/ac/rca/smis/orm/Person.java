@@ -14,7 +14,6 @@ public abstract class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-
     public String getName() {
         return name;
     }
