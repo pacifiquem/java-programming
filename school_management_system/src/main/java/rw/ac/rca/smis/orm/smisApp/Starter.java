@@ -20,7 +20,37 @@ public class Starter {
     public static void main(String[] args) {
         Date date = new Date();
 
-//add your codes here
+        // creating address
+        Address address1 = new Address("Kigali", "KK 22 ave");
+
+        //creating courses
+        Course course1 = new Course(5, "English", 50.0);
+        Course course2 = new Course(2, "Database", 30.0);
+        ArrayList<Course> courses = new ArrayList<Course>();
+        courses.add(course1);
+        courses.add(course2);
+
+        // creating Instructors
+        Instructor instructor1 = new Instructor("Pacifique Murangwa", date, 'M');
+        Instructor instructor2 = new Instructor("Niyo Eden", date, 'F');
+        ArrayList<Instructor> instructors = new ArrayList<Instructor>();
+        instructors.add(instructor1);
+        instructors.add(instructor2);
+
+        //creating Marks
+        Mark mark1 = new Mark(15);
+        Mark mark2 = new Mark(18);
+        ArrayList<Mark> marks = new ArrayList<Mark>();
+        marks.add(mark1);
+        marks.add(mark2);
+
+        //creating Students
+        Student student1 = new Student("Niyo Valens", date, 'M');
+        Student student2 = new Student("Uwayo Lina", date, 'F');
+        ArrayList<Student> students = new ArrayList<Student>();
+        students.add(student1);
+        students.add(student2);
+
 
         Configuration config = new Configuration();
         config.configure("hibernate.cfg.xml");
