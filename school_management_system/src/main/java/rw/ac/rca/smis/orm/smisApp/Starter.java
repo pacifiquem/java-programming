@@ -104,9 +104,16 @@ public class Starter {
         System.out.println(" Beginning transaction...........");
         Transaction transaction = session.beginTransaction();
 
-        //saving objects
-//        session.saveOrUpdate();
-
+        //saving all objects
+        session.saveOrUpdate(address1);
+        session.saveOrUpdate(course1);
+        session.saveOrUpdate(course2);
+        session.saveOrUpdate(instructor1);
+        session.saveOrUpdate(instructor2);
+        session.saveOrUpdate(mark1);
+        session.saveOrUpdate(mark2);
+        session.saveOrUpdate(student1);
+        session.saveOrUpdate(student2);
 
         transaction.commit();
         session.close();
