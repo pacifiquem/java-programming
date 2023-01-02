@@ -63,6 +63,13 @@ public class Starter {
         instructor1.setAddress(address1);
         instructor2.setAddress(address1);
 
+        //assigning courses to instructor
+        instructor1.setCourses(courses);
+
+        //assigning instructor to course
+        course1.setInstructor(instructor1);
+        course2.setInstructor(instructor1);
+
         Configuration config = new Configuration();
         config.configure("hibernate.cfg.xml");
         System.out.println("Opening session");
