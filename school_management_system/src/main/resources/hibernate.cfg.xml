@@ -32,7 +32,7 @@
         <property name="hibernate.c3p0.timeout">1800</property>
 
         <!-- Models -->
-<!--        <mapping class="rw.ac.rca.smis.orm.Course" />-->
+        <mapping class="rw.ac.rca.smis.orm.Course" />
         <mapping class="rw.ac.rca.smis.orm.Mark" />
         <mapping class="rw.ac.rca.smis.orm.Instructor" />
         <mapping class="rw.ac.rca.smis.orm.Student" />
