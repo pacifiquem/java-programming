@@ -51,10 +51,6 @@ public class Starter {
         students.add(student1);
         students.add(student2);
 
-        //assigning instuctors and students to address
-        address1.setInstructors(instructors);
-        address1.setStudents(students);
-
         //assigning address to student
         student1.setAddress(address1);
         student2.setAddress(address1);
@@ -64,18 +60,29 @@ public class Starter {
         instructor2.setAddress(address1);
 
         //assigning courses to instructor
-        instructor1.setCourses(courses);
+        ArrayList<Course> courseForInstructor1 = new ArrayList<Course>();
+        courseForInstructor1.add(course1);
+        instructor1.setCourses(courseForInstructor1);
+        //===========2===========
+        ArrayList<Course> courseForInstructor2 = new ArrayList<Course>();
+        courseForInstructor2.add(course2);
+        instructor2.setCourses(courseForInstructor2);
 
         //assigning instructor to course
         course1.setInstructor(instructor1);
-        course2.setInstructor(instructor1);
+        course2.setInstructor(instructor2);
 
         //assigning mark to course
         course1.setMark(marks);
 
         //assigning course to mark
+        ArrayList<Course> courseForMark1 = new ArrayList<>();
+        courseForMark1.add(course1);
         mark1.setCourse(course1);
-        mark1.setCourse(course1);
+        //=========2=============
+        ArrayList<Course> courseForMark2 = new ArrayList<>();
+        courseForMark2.add(course2);
+        mark2.setCourse(course2);
 
         //assign mark to student
         student1.setMark(marks);
@@ -83,7 +90,7 @@ public class Starter {
 
         //assign student to mark
         mark1.setStudent(student1);
-        mark2.setStudent(student1);
+        mark2.setStudent(student2);
 
         //assign course to student
         student1.setCourses(courses);

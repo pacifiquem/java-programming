@@ -2,6 +2,7 @@ package rw.ac.rca.smis.orm;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="course")
@@ -12,7 +13,7 @@ public class Course extends Person {
 	int id;
 
 	@OneToMany(mappedBy = "course")
-    private ArrayList<Mark> mark;
+    private List<Mark> mark;
 	private String name;
 	private double neatMark;
 	private int period;
@@ -21,7 +22,7 @@ public class Course extends Person {
 	private Instructor instructor;
 
 	@ManyToMany
-	private ArrayList<Student> students;
+	private List<Student> students = new ArrayList<Student>();
 
 	public Course() {}
 
@@ -59,7 +60,7 @@ public class Course extends Person {
 		this.period = period;
 	}
 
-	public ArrayList<Mark> getMark() {
+	public List<Mark> getMark() {
 		return mark;
 	}
 
@@ -75,7 +76,7 @@ public class Course extends Person {
 		this.instructor = instructor;
 	}
 
-	public ArrayList<Student> getStudents() {
+	public List<Student> getStudents() {
 		return students;
 	}
 

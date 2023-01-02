@@ -31,10 +31,10 @@ public class Student extends  Person{
 	@ManyToOne
 	private Address address;
 	@OneToMany(mappedBy = "student")
-	private ArrayList<Mark> mark;
+	private List<Mark> mark = new ArrayList<Mark>();
 
 	@ManyToMany(mappedBy = "students")
-	private ArrayList<Course> courses;
+	private List<Course> courses = new ArrayList<Course>();
 	public Student() {}
 
 	public Student( String name, Date dateOfBirth, char gender) {
@@ -71,14 +71,14 @@ public class Student extends  Person{
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-	public ArrayList<Mark> getMark() {
+	public List<Mark> getMark() {
 		return mark;
 	}
 	public void setMark(ArrayList<Mark> mark) {
 		this.mark = mark;
 	}
 
-	public ArrayList<Course> getCourses() {
+	public List<Course> getCourses() {
 		return courses;
 	}
 
