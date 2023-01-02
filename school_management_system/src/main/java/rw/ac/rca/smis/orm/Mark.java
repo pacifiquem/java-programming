@@ -14,8 +14,8 @@ public class Mark {
 	@ManyToOne
 	private Student student;
 
-	@ManyToMany
-	private ArrayList<Course> course;
+	@ManyToOne
+	private Course course;
 
 	public Mark() {}
 	public Mark( int scoredMark) {
@@ -38,4 +38,11 @@ public class Mark {
 		this.student = student;
 	}
 
+	public Course getCourse() {
+		return course;
+	}
+
+	public void setCourse(Course course) {
+		this.course = course;
+	}
 }

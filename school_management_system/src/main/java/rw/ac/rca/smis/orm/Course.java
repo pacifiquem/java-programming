@@ -11,7 +11,7 @@ public class Course extends Person {
 	@GeneratedValue(strategy = GenerationType.TABLE )
 	int id;
 
-	@ManyToMany(mappedBy = "course")
+	@OneToMany(mappedBy = "course")
     private ArrayList<Mark> mark;
 	private String name;
 	private double neatMark;
