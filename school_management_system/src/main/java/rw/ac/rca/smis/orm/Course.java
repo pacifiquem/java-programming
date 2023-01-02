@@ -17,10 +17,13 @@ public class Course extends Person {
 	private double neatMark;
 	private int period;
 
+	@ManyToOne
+	private Instructor instructor;
+
 
 	public Course() {}
 
-	public Course(Instructor instructor, int period, String name, double neatMark) {
+	public Course(int period, String name, double neatMark) {
 		this.period = period;
 		this.name = name;
 		this.neatMark = neatMark;
@@ -60,6 +63,14 @@ public class Course extends Person {
 
 	public void setMark(ArrayList<Mark> mark) {
 		this.mark = mark;
+	}
+
+	public Instructor getInstructor() {
+		return instructor;
+	}
+
+	public void setInstructor(Instructor instructor) {
+		this.instructor = instructor;
 	}
 
 }

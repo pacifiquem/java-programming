@@ -1,4 +1,5 @@
 package rw.ac.rca.smis.orm;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
@@ -26,6 +27,9 @@ public class Instructor extends Person{
 	private char gender;
 	@ManyToOne
 	private Address address;
+
+	@OneToMany(mappedBy = "instructor")
+	private ArrayList<Course> courses;
 	public Instructor() {}
 
 	public Instructor(String name, Date dateOfBirth, char gender) {
@@ -58,4 +62,19 @@ public class Instructor extends Person{
 		this.gender = gender;
 	}
 
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+	public ArrayList<Course> getCourses() {
+		return courses;
+	}
+
+	public void setCourses(ArrayList<Course> courses) {
+		this.courses = courses;
+	}
 }
