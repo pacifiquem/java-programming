@@ -18,7 +18,6 @@ public class Course extends Person {
 	private double neatMark;
 	private int period;
 
-
 	@ManyToOne
 	private Instructor instructor;
 
